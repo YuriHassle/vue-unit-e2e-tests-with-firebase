@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="error" v-if="error">{{error.message}}</div>
+    <div class="error" v-if="error">{{ error.message }}</div>
     <form @submit.prevent="pressed">
       Register
       <div class="email">
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import * as firebase from "firebase/app";
+import firebase from "firebase/app";
 import "firebase/auth";
 
 export default {
@@ -23,7 +23,7 @@ export default {
     return {
       email: "",
       password: "",
-      error: ""
+      error: "",
     };
   },
   methods: {
@@ -35,9 +35,9 @@ export default {
           console.log("here");
           this.$router.replace({ name: "secret" });
         })
-        .catch(error => (this.error = error));
-    }
-  }
+        .catch((error) => (this.error = error));
+    },
+  },
 };
 </script>
 

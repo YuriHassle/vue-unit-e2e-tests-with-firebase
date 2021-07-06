@@ -10,19 +10,19 @@
       </div>
       <button>Login</button>
     </form>
-    <div class="error" v-if="error">{{error.message}}</div>
+    <div class="error" v-if="error">{{ error.message }}</div>
   </div>
 </template>
 
 <script>
-import * as firebase from "firebase/app";
+import firebase from "firebase/app";
 import "firebase/auth";
 export default {
   data() {
     return {
       email: "",
       password: "",
-      error: ""
+      error: "",
     };
   },
   methods: {
@@ -30,15 +30,15 @@ export default {
       firebase
         .auth()
         .signInWithEmailAndPassword(this.email, this.password)
-        .then(data => {
+        .then((data) => {
           console.log(data);
           this.$router.replace({ name: "secret" });
         })
-        .catch(error => {
+        .catch((error) => {
           this.error = error;
         });
-    }
-  }
+    },
+  },
 };
 </script>
 

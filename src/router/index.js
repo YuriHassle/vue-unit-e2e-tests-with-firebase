@@ -5,7 +5,7 @@ import Register from "../views/Register.vue";
 import Login from "../views/Login.vue";
 import Secret from "../views/Secret.vue";
 
-import * as firebase from "firebase/app";
+import firebase from "firebase/app";
 import "firebase/auth";
 
 Vue.use(VueRouter);
