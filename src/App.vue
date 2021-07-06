@@ -21,7 +21,7 @@ export default {
   },
   data() {
     return {
-      blah: "erik",
+      name: "yuri",
     };
   },
 };

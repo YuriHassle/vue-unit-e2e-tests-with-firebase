@@ -32,7 +32,7 @@ export default {
       };
 
       this.secrets = await this.$axios.get(
-        "http://localhost:3000/erik",
+        "http://localhost:8080/yuri",
         config
       );
       this.secrets = this.secrets.data;
