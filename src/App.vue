@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import Header from "./components/Top-Header";
+import Header from "./components/TopHeader";
 export default {
   components: {
     "top-header": Header,
